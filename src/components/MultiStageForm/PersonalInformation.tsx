@@ -1,4 +1,4 @@
-import { FormValues } from "@/types";
+import { FormValues, IPersonalInfo } from "@/types";
 import React from "react";
 import { useFormContext, FieldErrors } from "react-hook-form";
 
@@ -8,13 +8,8 @@ const PersonalInformation: React.FC = () => {
     formState: { errors },
   } = useFormContext<FormValues>();
 
-  const personalInfoErrors = (errors.personalInfo ?? {}) as FieldErrors<{
-    fullName: string;
-    dateOfBirth: string;
-    nationality: string;
-    email: string;
-    phone: string;
-  }>;
+  const personalInfoErrors = (errors.personalInfo ??
+    {}) as FieldErrors<IPersonalInfo>;
 
   return (
     <div>

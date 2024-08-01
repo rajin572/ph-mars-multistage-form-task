@@ -1,4 +1,4 @@
-import { FormValues } from "@/types";
+import { FormValues, IHealthAndSafety } from "@/types";
 import React from "react";
 import { useFormContext, FieldErrors } from "react-hook-form";
 
@@ -8,11 +8,8 @@ const HealthAndSafety: React.FC = () => {
     formState: { errors },
   } = useFormContext<FormValues>();
 
-  const healthAndSafetyErrors = (errors.healthAndSafety ?? {}) as FieldErrors<{
-    healthDeclaration: boolean;
-    emergencyContact: string;
-    medicalConditions?: string;
-  }>;
+  const healthAndSafetyErrors = (errors.healthAndSafety ??
+    {}) as FieldErrors<IHealthAndSafety>;
 
   return (
     <div>

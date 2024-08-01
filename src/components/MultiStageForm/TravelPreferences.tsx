@@ -1,4 +1,4 @@
-import { FormValues } from "@/types";
+import { FormValues, ITravelPreferences } from "@/types";
 import React from "react";
 import { useFormContext, FieldErrors } from "react-hook-form";
 
@@ -9,12 +9,7 @@ const TravelPreferences: React.FC = () => {
   } = useFormContext<FormValues>();
 
   const travelPreferencesErrors = (errors.travelPreferences ??
-    {}) as FieldErrors<{
-    departureDate: string;
-    returnDate: string;
-    accommodation: string;
-    specialRequests?: string;
-  }>;
+    {}) as FieldErrors<ITravelPreferences>;
 
   return (
     <div>

@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import { Toaster } from "sonner";
+import Navbar from "@/components/shared/Navbar/Navbar";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -26,7 +28,13 @@ export default function RootLayout({
           fontSans.variable
         )}
       >
-        {children}
+        <div className="">
+          <div className="sticky top-0 z-50 w-full">
+            <Navbar />
+          </div>
+          <div>{children}</div>
+          <Toaster />
+        </div>
       </body>
     </html>
   );
