@@ -52,8 +52,9 @@ const HealthAndSafety: React.FC = () => {
         <div className="mb-5 lg:col-span-2">
           <label className="font-semibold text-white">Medical Conditions</label>
           <textarea
+            required
             className="h-32 border-2 border-white p-2 rounded-2xl w-full focus:border-2 focus:border-[#DF0000] outline-none px-3"
-            placeholder="If You Have Any Medical Condition You Can Tell Us"
+            placeholder="If You Have Any Medical Condition You Can Tell Us Otherwise Type N/A"
             {...register("healthAndSafety.medicalConditions")}
           />
           {healthAndSafetyErrors?.medicalConditions && (

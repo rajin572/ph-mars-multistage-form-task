@@ -21,7 +21,7 @@ export interface ITravelPreferences {
 export interface IHealthAndSafety {
   healthDeclaration: string;
   emergencyContact: string;
-  medicalConditions?: string | undefined;
+  medicalConditions: string;
 }
 
 export interface IVisitor {
