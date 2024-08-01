@@ -27,7 +27,7 @@ const healthAndSafetySchema = z.object({
   emergencyContact: z
     .string()
     .min(1, "Emergency Contact Information is required"),
-  medicalConditions: z.string().optional(),
+  medicalConditions: z.string().min(1, "Medical Conditions is required"),
 });
 
 export const formSchema = z.object({
