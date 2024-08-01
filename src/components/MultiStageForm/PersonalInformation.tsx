@@ -22,6 +22,7 @@ const PersonalInformation: React.FC = () => {
         <div className="mb-5">
           <label className="font-semibold text-white ms-1">Full Name</label>
           <input
+            required
             {...register("personalInfo.fullName")}
             placeholder="Enter Your Name"
             className="border-2 border-white py-2 rounded-2xl w-full focus:border-2 focus:border-[#DF0000] outline-none px-3"
@@ -35,6 +36,7 @@ const PersonalInformation: React.FC = () => {
         <div className="mb-5">
           <label className="font-semibold text-white ms-1">Date of Birth</label>
           <input
+            required
             type="date"
             {...register("personalInfo.dateOfBirth")}
             className="border-2 border-white py-2 rounded-2xl w-full focus:border-2 focus:border-[#DF0000] outline-none px-3"
@@ -48,6 +50,7 @@ const PersonalInformation: React.FC = () => {
         <div className="mb-5">
           <label className="font-semibold text-white ms-1">Nationality</label>
           <input
+            required
             {...register("personalInfo.nationality")}
             placeholder="Enter Your Nationality"
             className="border-2 border-white py-2 rounded-2xl w-full focus:border-2 focus:border-[#DF0000] outline-none px-3"
@@ -61,6 +64,7 @@ const PersonalInformation: React.FC = () => {
         <div className="mb-5">
           <label className="font-semibold text-white ms-1">Email</label>
           <input
+            required
             type="email"
             {...register("personalInfo.email")}
             placeholder="Enter Your Email"
@@ -75,6 +79,7 @@ const PersonalInformation: React.FC = () => {
         <div className="mb-5">
           <label className="font-semibold text-white ms-1">Phone</label>
           <input
+            required
             {...register("personalInfo.phone")}
             placeholder="Enter Your Phone Number"
             className="border-2 border-white py-2 rounded-2xl w-full focus:border-2 focus:border-[#DF0000] outline-none px-3"

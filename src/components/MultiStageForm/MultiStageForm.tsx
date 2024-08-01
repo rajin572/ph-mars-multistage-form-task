@@ -37,8 +37,7 @@ const MultiStageForm: React.FC = () => {
           id: toastId,
           duration: 1000,
         });
-        console.log(res);
-        // methods.reset();
+        methods.reset();
       } else {
         throw new Error("Something Want Wrong");
       }

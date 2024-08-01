@@ -8,14 +8,16 @@ const personalInfoSchema = z.object({
   phone: z.string().min(1, "Phone is required"),
 });
 const travelPreferencesSchema = z.object({
-  departureDate: z.string().min(1, "Date of Birth is required"),
-  returnDate: z.string().min(1, "Date of Birth is required"),
+  departureDate: z.string().min(1, "Departure Date is required"),
+  returnDate: z.string().min(1, "Return Date is required"),
   accommodation: z
     .enum(["Space Hotel", "Martian Base"])
     .refine((val) => val !== undefined, {
       message: "Value must be Space Hotel or Martian Base",
     }),
-  specialRequests: z.string().optional(),
+  specialRequests: z
+    .string()
+    .min(1, "Special Requests or Preferences is required"),
 });
 
 const healthAndSafetySchema = z.object({

@@ -15,7 +15,7 @@ export interface ITravelPreferences {
   departureDate: string;
   returnDate: string;
   accommodation: string;
-  specialRequests?: string | undefined;
+  specialRequests: string;
 }
 
 export interface IHealthAndSafety {

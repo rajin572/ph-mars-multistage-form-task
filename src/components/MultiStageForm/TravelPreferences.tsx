@@ -24,6 +24,7 @@ const TravelPreferences: React.FC = () => {
             Departure Date
           </label>
           <input
+            required
             className="border-2 border-white p-2 rounded-2xl w-full focus:border-2 focus:border-[#DF0000] outline-none px-3"
             type="date"
             {...register("travelPreferences.departureDate")}
@@ -37,6 +38,7 @@ const TravelPreferences: React.FC = () => {
         <div className="mb-5">
           <label className="font-semibold text-white ms-1">Return Date</label>
           <input
+            required
             className="border-2 border-white p-2 rounded-2xl w-full focus:border-2 focus:border-[#DF0000] outline-none px-3"
             type="date"
             {...register("travelPreferences.returnDate")}
@@ -52,6 +54,7 @@ const TravelPreferences: React.FC = () => {
             Accommodation Preference
           </label>
           <select
+            required
             className="border-2 border-white p-2 rounded-2xl w-full focus:border-2 focus:border-[#DF0000] outline-none px-3"
             {...register("travelPreferences.accommodation")}
           >
@@ -70,8 +73,9 @@ const TravelPreferences: React.FC = () => {
             Special Requests
           </label>
           <textarea
+            required
             className="h-32 border-2 border-white p-2 rounded-2xl w-full focus:border-2 focus:border-[#DF0000] outline-none px-3"
-            placeholder="If You Have Any Special Request You Can Tell Us"
+            placeholder="Have Any Special Request You Can Tell Us"
             {...register("travelPreferences.specialRequests")}
           />
           {travelPreferencesErrors?.specialRequests && (

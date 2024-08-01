@@ -11,9 +11,12 @@ import {
 import { IVisitorsData } from "@/types";
 
 const AllMarsVisitors = async () => {
-  const res = await fetch("http://localhost:5000/api/v1/visitors", {
-    cache: "no-store",
-  });
+  const res = await fetch(
+    "https://multi-stage-form-ph-server.vercel.app/api/v1/visitors",
+    {
+      cache: "no-store",
+    }
+  );
 
   const visitorsData = await res.json();
   return (

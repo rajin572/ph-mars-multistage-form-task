@@ -22,6 +22,7 @@ const HealthAndSafety: React.FC = () => {
         <div className="mb-5">
           <label className="font-semibold text-white">Health Declaration</label>
           <select
+            required
             className="border-2 border-white p-2 rounded-2xl w-full focus:border-2 focus:border-[#DF0000] outline-none px-3"
             {...register("healthAndSafety.healthDeclaration")}
           >
@@ -38,6 +39,7 @@ const HealthAndSafety: React.FC = () => {
         <div className="mb-5">
           <label className="font-semibold text-white">Emergency Contact</label>
           <input
+            required
             className="border-2 border-white p-2 rounded-2xl w-full focus:border-2 focus:border-[#DF0000] outline-none px-3"
             {...register("healthAndSafety.emergencyContact")}
           />
